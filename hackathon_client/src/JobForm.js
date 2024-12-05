@@ -1,7 +1,6 @@
-// src/components/JobForm.js
 import React, { useState } from 'react';
 import apiService from './apiService';
-import './App.css'; // Import the CSS file
+import './App.css';
 
 const JobForm = () => {
   const [jobData, setJobData] = useState({
@@ -27,7 +26,7 @@ const JobForm = () => {
     apiService.createJob(jobData)
       .then(response => {
         console.log('Job created:', response.data);
-        // Reset form after successful submission
+        
         setJobData({
           title: '',
           description: '',

@@ -1,7 +1,6 @@
-// src/components/JobList.js
 import React, { useState } from 'react';
 import apiService from './apiService';
-import './App.css'; // Import the CSS file
+import './App.css'; 
 
 const JobList = () => {
   const [jobs, setJobs] = useState([]);
@@ -10,7 +9,7 @@ const JobList = () => {
     console.log('Fetching jobs');
     apiService.getJobs()
       .then(response => {
-        console.log('Jobs fetched:', response.data); // Log response data
+        console.log('Jobs fetched:', response.data);
         if (Array.isArray(response.data)) {
           setJobs(response.data);
         } else {
